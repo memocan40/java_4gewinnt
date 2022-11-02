@@ -1,3 +1,5 @@
+package Logik.src;
+
 import java.util.Scanner;
 
 public class VierGewinnt {
@@ -23,7 +25,7 @@ public class VierGewinnt {
   public static void spielzug(char[][] spielfeld, int player, int runde, boolean gewinner) {
     Scanner eingabe = new Scanner(System.in);
     erzeugeSpielfeld(spielfeld);
-    System.out.println("Spieler " + player + " wähle eine Spalte aus");
+    System.out.println("Spieler " + player + " wï¿½hle eine Spalte aus");
     int play = eingabe.nextInt();
 
     if (spielzugBestaetiegen(spielfeld, play) == true) {
@@ -37,7 +39,7 @@ public class VierGewinnt {
       erzeugeSpielfeld(spielfeld);
 
     } else if (fallUnterscheidungImSpielzug(spielfeld, play) == false) {
-      System.out.println("Bitte geben sie eine gültige Zahl ein.");
+      System.out.println("Bitte geben sie eine gï¿½ltige Zahl ein.");
       play = eingabe.nextInt();
       if (spielzugBestaetiegen(spielfeld, play) == true) {
         if (player != 2) {
@@ -97,7 +99,7 @@ public class VierGewinnt {
     }
   }
   
-  //schließt eine falsche Zahl aus
+  //schlieï¿½t eine falsche Zahl aus
   public static boolean fallUnterscheidungImSpielzug(char[][] spielfeld, int play) {
     if (play < 0 || play > 6) {
       return false;
@@ -197,8 +199,8 @@ public class VierGewinnt {
   public static void main(String[] args) {
     System.out.println("Anleitung:");
     System.out.println("Geben Sie eine Spalte an,");
-    System.out.println("in die Sie ihren Stein platzieren möchten.");
-    System.out.println("Bestätigen Sie ihre wahl mit Enter.");
+    System.out.println("in die Sie ihren Stein platzieren mï¿½chten.");
+    System.out.println("Bestï¿½tigen Sie ihre wahl mit Enter.");
     System.out.println("Besitzen Sie 4 Steine Horizontal, Vertikal"); 
     System.out.println("oder Diagonal in einer Reihe so haben Sie gewonnen.");
     char[][] spielfeld = new char[6][7];
